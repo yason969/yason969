@@ -3,31 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>White Wolf Image</title>
+    <title>Feel-Good Message</title>
     <style>
-        #wolf-image {
-            max-width: 100%;
-            height: auto;
+        #message-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #004d40;
+            font-size: 1.5em;
+        }
+
+        #message {
+            padding: 20px;
+            border: 2px solid #004d40;
+            border-radius: 15px;
+            background-color: #e0f7fa;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <div id="image-container"></div>
+    <div id="message-container">
+        <div id="message"></div>
+    </div>
 
     <script>
-        function showWhiteWolf() {
-            const imageContainer = document.getElementById('image-container');
-            const img = document.createElement('img');
-            img.src = 'https://www.google.com/search?q=white+wolf&rlz=1CDGOYI_enUS1096US1096&oq=white+wolf&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDI0MTZqMGo0qAICsAIB4gMEGAEgXw&hl=en-US&sourceid=chrome-mobile&ie=UTF-8#vhid=Ebch1GUbs_LniM&vssid=_Alw1Z_HTDKOY0PEPuY3LmA0_19'; 
-            // Replace with a URL or path to the image
-            img.alt = 'White Wolf';
-            img.id = 'wolf-image';
-            
-            imageContainer.appendChild(img);
+        function showHappyMessage() {
+            const messageElement = document.getElementById('message');
+            const message = "You are amazing and capable of great things! 😊";
+
+            messageElement.textContent = message;
         }
 
-        // Call the function to show the image
-        showWhiteWolf();
+        // Show the happy message when the page loads
+        window.onload = showHappyMessage;
     </script>
 </body>
 </html>
